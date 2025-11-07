@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Benito — Portfolio | Web Developer & Video Editor</title>
+  <meta name="description" content="Benito — Web Developer, Video Editor & Content Creator. I build responsive websites (HTML/CSS/JS/Django), edit videos, and create content to grow brands." />
+  <style>
+    /* ---------- Base / Reset ---------- */
+    :root{
+      --bg:#ffffff; --accent:#0f62fe; --muted:#6b7280; --text:#111827;
+      --card:#f8fafc; --radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    /* ---------- Layout ---------- */
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{
+      width:110px;height:110px;border-radius:16px;overflow:hidden;flex-shrink:0;
+      box-shadow:0 8px 20px rgba(15,98,254,0.08);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero{
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .name{font-size:34px;font-weight:700;letter-spacing:0.6px}
+    .title{font-size:15px;color:var(--muted)}
+    .contact{margin-top:12px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .chip{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:var(--card);font-size:13px}
+    .chip svg{opacity:.9}
+    main{display:grid;grid-template-columns:1fr 360px;gap:32px;margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:12px}
+    .section-title{font-weight:700;margin-bottom:12px;font-size:16px}
+    .about p{color:var(--muted);font-size:15px}
+    ul.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;list-style:none;padding-left:0}
+    ul.skills li{background:white;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.03);font-size:14px;color:#111}
+    /* projects */
+    .projects .project{margin-bottom:14px;padding:12px;border-radius:8px;background:white;border:1px solid rgba(0,0,0,0.04)}
+    .project-title{font-weight:700;font-size:15px}
+    .project-desc{color:var(--muted);font-size:14px;margin-top:6px}
+    /* right column */
+    .right{display:flex;flex-direction:column;gap:16px}
+    .links a{display:flex;gap:12px;align-items:center;padding:10px;border-radius:10px;background:white;border:1px solid rgba(0,0,0,0.04)}
+    .links a strong{font-size:14px}
+    .qr-wrap{display:flex;gap:12px;align-items:center}
+    .qr{width:110px;height:110px;border-radius:10px;background:white;padding:8px;border:1px solid rgba(0,0,0,0.04)}
+    .download-cv{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;font-weight:600}
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr}
+      .right{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <!-- Replace with your portrait -->
+        <img src="C:\Users\USER\Documents\ito prot\ito cv\IMG_20250826_214738.jpg" alt="Benito portrait">
+      </div>
+      <div class="hero">
+        <div class="name">BENITO</div>
+        <div class="title">Web Developer • Video Editor • Content Creator</div>
+        <div class="contact" aria-label="Contact info">
+          <span class="chip" title="Location">
+            <!-- location icon -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2C8.686 2 6 4.686 6 8c0 4.5 6 11 6 11s6-6.5 6-11c0-3.314-2.686-6-6-6z" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Lagos, Nigeria
+          </span>
+          <a class="chip" href="tel:+2348107832852">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V20a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 6.81 19.8 19.8 0 0 1 0  - " stroke="#111"/></svg>
+            +2348107832852
+          </a>
+          <a class="chip" href="mailto:benity007@gmail.com">benity007@gmail.com</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- left / main column -->
+      <div>
+        <section class="card about">
+          <div class="section-title">Professional Summary</div>
+          <p>
+            Highly motivated and self-taught <strong>Web Developer, Video Editor, and Content Creator</strong> with experience building responsive websites, editing engaging video content, and creating digital assets that convert. Skilled in <strong>HTML, CSS, JavaScript, Django, Firebase</strong>, and multimedia tools (CapCut, Filmora, Canva). I build modern user experiences and content that helps brands grow.
+          </p>
+        </section>
+        <section class="card" style="margin-top:18px">
+          <div class="section-title">Key Skills</div>
+          <ul class="skills" aria-label="Key technical and soft skills">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (vanilla & basics of React)</li>
+            <li>Python & Django</li>
+            <li>Firebase (Auth & Firestore)</li>
+            <li>Responsive Web Design</li>
+            <li>Video Editing: CapCut & Filmora</li>
+            <li>Canva & Graphic Assets</li>
+            <li>Version Control: Git & GitHub</li>
+            <li>Content Creation: YouTube, Reels, Shorts</li>
+            <li>Communication & Time Management</li>
+          </ul>
+        </section>
+        <section class="card projects" style="margin-top:18px">
+          <div class="section-title">Projects & Experience</div>
+          <div class="project">
+            <div class="project-title">ITO Mastery Website</div>
+            <div class="project-desc">
+              Founder & Developer — Designed and developed a full-featured website for a calisthenics brand. Features: eBook sales pages, video tutorials, coaching sign-ups, and mobile-first responsive design.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-desc">
+              Personal CV/Portfolio Website — Showcases web & video projects; contact form integrated via mailto / email service. Modern responsive layout.
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-title">Video Editing & Content Campaigns</div>
+            <div class="project-desc">
+              Edited short-form videos and long-form tutorials for YouTube and social platforms using CapCut, Filmora, and Canva. Created social assets and eBook templates for sale funnels.
+            </div>
+          </div>
+        </section>
+        <section class="card" style="margin-top:18px">
+          <div class="section-title">Contact</div>
+          <p style="color:var(--muted);font-size:15px">
+            <strong>Phone:</strong> <a href="tel:+2348107832852">+2348107832852</a><br>
+            <strong>Email:</strong> <a href="mailto:benity007@gmail.com">benity007@gmail.com</a><br>
+            <strong>Location:</strong> Lagos, Nigeria
+          </p>
+          <p style="margin-top:10px;">
+            <a class="download-cv" href="C:\Users\USER\Documents\ito prot\ito cv\assets\Benito_CV.pdf" id="downloadCvBtn">Download CV (PDF)</a>
+            <!-- Note: 'Download CV' link expects you to upload a CV PDF at /assets/Benito_CV.pdf or change href -->
+            <p>Get a copy of my latest CV in PDF format</p>
+        </p>
+        </section>
+      </div>
+      <!-- right / sidebar -->
+      <aside class="right">
+        <div class="card">
+          <div class="section-title">Connect</div>
+          <div class="links" style="display:flex;flex-direction:column;gap:10px">
+            <a href="https://www.linkedin.com/in/benitoito" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden style="opacity:.9;margin-left:6px"><path fill="#0A66C2" d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8.2 7h4.8v2.3h.1c.7-1.3 2.4-2.7 4.9-2.7 5.3 0 6.3 3.5 6.3 8V24h-5v-8.2c0-2 0-4.6-2.8-4.6-2.9 0-3.1 2.1-3.1 4.4V24H8.2V7z"/></svg>
+              <strong>LinkedIn</strong><span style="margin-left:auto;color:var(--muted);font-size:13px">linkedin.com/in/benitoito</span>;
+            </a>
+            <a href="https://fiverr.com/benitoito" target="_blank" rel="noopener">
+              <strong>Fiverr</strong><span style="margin-left:auto;color:var(--muted);font-size:13px">fiverr.com/benitoito</span>;
+            </a>
+            <a href=" " target="_blank" rel="noopener">
+                <strong>GitHub</strong><span style="margin-left:auto;color:var(--muted);font-size:13px">fiverr.com/benitoito</span>;
+              </a>
+              
+            <a href="https://www.upwork.com/freelancers/benitoito" target="_blank" rel="noopener">
+              <strong>Upwork</strong><span style="margin-left:auto;color:var(--muted);font-size:13px">upwork.com/freelancers/benitoito</span>;
+            </a>
+            <a href="https://www.youtube.com/@calisthenicsmastery" target="_blank" rel="noopener">
+              <strong>YouTube</strong><span style="margin-left:auto;color:var(--muted);font-size:13px">@calisthenicsmastery</span>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-title">QR to Portfolio</div>
+          <div class="qr-wrap">
+            <!-- Google Chart API generates QR code for the portfolio URL. Replace the 'chl' value with your portfolio URL -->
+            <div class="qr" aria-hidden>
+              <img id="qrImage" alt="QR code to portfolio" style="width:100%;height:100%;object-fit:contain"
+                src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=https%3A%2F%2Fwww.itomastery.com&choe=UTF-8">
+            </div>
+            <div style="font-size:14px;color:var(--muted)">
+              Scan to visit <br><strong>www.itomastery.com</strong>
+            </div>
+          </div>
+          <p style="margin-top:12px;color:var(--muted);font-size:13px">Tip: replace the QR image URL with a direct link to your live portfolio or LinkedIn.</p>
+        </div>
+        <div class="card">
+          <div class="section-title">Quick Skills</div>
+          <p style="color:var(--muted);font-size:14px">
+            Web Development • Django • Firebase • Responsive Design • Video Editing • YouTube Content • eBook Design
+          </p>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      © <span id="year"></span> BENITO — Built with care • <a href="https://www.itomastery.com" target="_blank">www.itomastery.com</a>
+    </footer>
+  </div>
+  <script>
+     document.getElementById("downloadBtn").addEventListener("click", function () {
+    // Replace with your actual file path if hosted online
+    const cvFilePath = " ";
+   
+    // Create an invisible link to trigger the download
+    const link = document.createElement("a");
+    link.href = cvFilePath;
+    link.download = "C:\Users\USER\Documents\ito prot\ito cv\assets\Benito_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+  </script>
+</body>
+</html>
